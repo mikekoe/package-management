@@ -13,7 +13,7 @@
 + Attach Security Group to EC2 Instance.
 + Install java openJDK 1.8+
 
-### Install Java JDK 1.8+ & Tomcat version 9.0.55
+### Install Java JDK 1.8+ & Tomcat version 9.0.89
 
 ``` sh
 # install Java JDK 1.8+ as a pre-requisit for tomcat to run.
@@ -21,10 +21,10 @@ cd /opt
 sudo yum install git unzip tree wget -y
 sudo yum install java-1.8.0-openjdk-devel -y
 # Download tomcat software and extract it.
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
-sudo tar -xvf apache-tomcat-9.0.62.tar.gz
-sudo rm apache-tomcat-9.0.62.tar.gz
-sudo mv apache-tomcat-9.0.62 tomcat9
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.89/bin/apache-tomcat-9.0.89.tar.gz
+sudo tar -xvf apache-tomcat-9.0.89.tar.gz
+sudo rm apache-tomcat-9.0.89.tar.gz
+sudo mv apache-tomcat-9.0.89 tomcat9
 sudo chmod 777 -R /opt/tomcat9
 sudo sh /opt/tomcat9/bin/startup.sh
 # create a soft link to start and stop tomcat
