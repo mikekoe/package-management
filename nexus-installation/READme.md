@@ -11,7 +11,7 @@
 + Create Security Group and open Required ports.
    + 8081 ..etc
 + Attach Security Group to EC2 Instance.
-+ Install java openJDK 1.8+ for Nexus version 3.15
++ Install java openJDK 1.8+ for Nexus version 3.47
 
 ## Create nexus user to manage the Nexus server
 ```sh
@@ -19,7 +19,7 @@
 # so create a new user called nexus and grant sudo access to manage nexus services as follows. 
 sudo hostname nexus
 sudo useradd nexus
-# Grand sudo access to nexus user
+# Grant sudo access to nexus user
 sudo echo "nexus ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/nexus
 sudo su - nexus
 ```
@@ -33,9 +33,9 @@ sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
 ```
 ### Download nexus software and extract it (unzip).
 ```sh
-sudo wget https://download.sonatype.com/nexus/3/nexus-3.69.0-02-java8-unix.tar.gz 
-sudo tar -zxvf nexus-3.69.0-02-java8-unix.tar.gz
-sudo mv /opt/nexus-3.15.2-01 /opt/nexus
+sudo wget https://download.sonatype.com/nexus/3/nexus-3.47.1-01-unix.tar.gz
+sudo tar -zxvf nexus-3.47.1-01-java8-unix.tar.gz
+sudo mv nexus-3.47.1-01 nexus
 ```
 
 ## Grant permissions for nexus user to start and manage nexus service
